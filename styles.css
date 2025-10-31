@@ -1,55 +1,107 @@
-/* @import url('https://fonts.googleapis.com/css?family=Parisienne|Playball'); */
+
+
+
 
 body {
- background:url(https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=745);
-  background-size:10%;
+  background: url(https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=745);
+  background-size: 10%;
+  font-family: sans-serif;
+  color: #fff;
 }
 
+
+.whole {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+}
+
+
 .tekst-ramme {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .frame {
-  margin:50px auto;
-  border:25px solid #a69e9b;
-  height:475px;
-  width:350px;
-  -webkit-box-shadow:  px 2px 3px 1px rgba(67, 60, 60, 0.5);
-  box-shadow:  0px 3px 10px 4px rgba(93, 72, 72, 0.3);
+  margin: 50px auto;
+  border: 25px solid #a69e9b;
+  height: 475px;
+  width: 350px;
+  box-shadow: 0px 3px 10px 4px rgba(93, 72, 72, 0.3);
 }
 
 .border {
-  background:white;
-  height:100%;
-  width:100%;
-  -webkit-box-shadow: inset 10px 10px 10px 4px rgba(0, 0, 0, .4);
+  background: white;
+  height: 100%;
+  width: 100%;
   box-shadow: inset 3px 7px 2px 5px rgba(87, 47, 47, 0.4);
 }
 
 .image {
-  position:absolute;
-  height:350px;
-  width:250px;
-  margin-left:50px;
-  margin-top:50px;
-  -webkit-box-shadow: inset 10px 10px 10px 4px rgba(0, 0, 0, .6);
-  box-shadow: inset 3px 7px 2px 5px rgba(0, 0, 0, .1);
-  border:2px inset #c9c9c9;
+  position: absolute;
+  height: 350px;
+  width: 250px;
+  margin-left: 50px;
+  margin-top: 50px;
+  box-shadow: inset 3px 7px 2px 5px rgba(0, 0, 0, 0.1);
+  border: 2px inset #c9c9c9;
 }
 
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 .text {
-  
   font-size: 1.2rem;
   color: #fff;
-  background: rgba(0, 0, 0, 0.45); 
-  backdrop-filter: blur(6px); 
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
   padding: 1.5rem;
   width: 340px;
-  min-height: 360px;
+  min-height: 100px;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   line-height: 1.6;
   letter-spacing: 0.3px;
+  margin-top: 20px;
+  text-align: center;
 }
+
+
+.gallery-list {
+  width: 240px;
+  max-height: 500px;
+  overflow-y: auto;
+  border: 3px solid #a69e9b;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 10px;
+  margin-top: 50px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery-list li {
+  color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: .7s ease;
+}
+
+.gallery-list li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
