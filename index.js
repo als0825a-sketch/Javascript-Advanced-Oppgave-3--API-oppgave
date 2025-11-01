@@ -3,33 +3,21 @@
  const text = document.getElementById("text");
  const list = document.getElementById("gally");
  
+ function li(text, onClick) {
+ const li = document.createElement("li");
+      li.textContent = text;
+      list.appendChild(li);
+      li.addEventListener("click", onClick )
+ }
 
 getGallery(artworks => {
 
   artworks.forEach((art) => {
-    const li = document.createElement("li");
-    li.textContent = art.title;
-    li.dataset.imageId = art.image_id;
-    li.dataset.artist = art.artist_title || "Unknown Artist";
-    list.appendChild(li);
-  });
-
-    list.addEventListener("click", (e) => {
-      if (e.target.tagName === "LI") {
-        const imageId = e.target.dataset.imageId;
-        const artist = e.target.dataset.artist;
-        const title = e.target.textContent;
-
-          if (imageId) {
-            const imageUrl = `https://www.artic.edu/iiif/2/${imageId}/full/843,/0/default.jpg`;
+     li(art.title, ()=>{
+            const imageUrl = `https://www.artic.edu/iiif/2/${art.image_id}/full/843,/0/default.jpg`;
             image.src = imageUrl;
-            text.textContent = `${title} by ${artist}`;
-           } 
-           else {
-            image.src = "";
-            text.textContent = "No image available.";
-          }
-      }
+            text.textContent = `${art.title} by ${art.artist_title}`;
+        })
     });
+  });
   
-} )
