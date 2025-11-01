@@ -2,7 +2,7 @@
  const image = document.getElementById("bilde");
  const text = document.getElementById("text");
  const list = document.getElementById("gally");
-
+ 
 
  const API_URL = "https://api.artic.edu/api/v1/artworks?limit=10";
 
