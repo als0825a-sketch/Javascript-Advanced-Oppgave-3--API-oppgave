@@ -6,8 +6,7 @@
 
  const API_URL = "https://api.artic.edu/api/v1/artworks?limit=10";
 
-
-async function loadArtworks() {
+(async () => {
   const response = await fetch(API_URL);
   const data = await response.json();
 
@@ -37,7 +36,4 @@ async function loadArtworks() {
       }
     }
   });
-}
-
-loadArtworks();
-
+})();
